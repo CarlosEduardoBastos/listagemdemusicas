@@ -1,16 +1,22 @@
 import React from "react";
 import { HomeContainer } from "./Home.styled";
-import banner from "../../img/banner.jpg";
+
+import { DadosContext } from "../../context/Dados";
+import ComponentMusic from "../../components/music/Music";
 
 const Home = () => {
+  //const { data, error, loading } = React.useContext(DadosContext);
+  // if(error) return <p>{error}</p>
+  // if (loading) return <p>Carregando...</p>;
+  // if(data){
+  // return (
+
+  // );}
+  //console.log(data);
+
   return (
     <HomeContainer>
-      <div className="banner">
-        <img src={banner} alt="" />
-      </div>
-      <div className="content">
-        <h1>Welcome to the Home Page</h1>
-      </div>
+      <ComponentMusic />
     </HomeContainer>
   );
 };

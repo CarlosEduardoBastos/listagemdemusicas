@@ -1,14 +1,14 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home/Home";
+import Header from "./components/Header/Header";
+import { DadosProvider } from "./context/Dados";
+import RoutesComponent from "./Routes";
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-      </Routes>
-    </BrowserRouter>
+    <DadosProvider>
+      <Header />
+      <RoutesComponent />
+    </DadosProvider>
   );
 };
 
