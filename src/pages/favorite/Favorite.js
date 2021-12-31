@@ -1,21 +1,24 @@
 import React from "react";
 import { DadosContext } from "../../context/Dados";
+import { FavoriteContainer } from "./Favorite.styled";
 
 const Favorite = () => {
   const { favorit } = React.useContext(DadosContext);
   console.log(favorit);
   return (
-    <div>
-      {favorit &&
-        favorit.map(({ id, title, album }) => (
-          <div key={id}>
-            <div className="imagem-music">
-              <img src={album.cover} alt="" />
+    <FavoriteContainer>
+      <section className="favorite-itens">
+        {favorit &&
+          favorit.map(({ id, title, album }) => (
+            <div key={id} className="itens">
+              <div className="imagem-music">
+                <img src={album.cover_medium} alt="" />
+              </div>
+              {title}
             </div>
-            {title}
-          </div>
-        ))}
-    </div>
+          ))}
+      </section>
+    </FavoriteContainer>
   );
 };
 

@@ -3,6 +3,9 @@ import styled from "styled-components";
 export const MusicContainer = styled.section`
   width: 100%;
   font-family: Arial, Helvetica, sans-serif;
+  h2 {
+    margin: 10px;
+  }
   .content {
     max-width: 1200px;
     margin: 60px auto;

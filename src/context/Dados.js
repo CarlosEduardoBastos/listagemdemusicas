@@ -21,9 +21,7 @@ export const DadosProvider = ({ children }) => {
           {
             method: "GET",
             headers: {
-              "x-rapidapi-host": "deezerdevs-deezer.p.rapidapi.com",
-              "x-rapidapi-key":
-                "c6f007336bmsh95cb737e837da3bp177ce0jsnd57c74bdb433",
+              
             },
           }
         );

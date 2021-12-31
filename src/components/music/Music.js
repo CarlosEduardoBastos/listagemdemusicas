@@ -5,9 +5,14 @@ import { MusicContainer } from "./Music.styled";
 const ComponentMusic = () => {
   const { newData, setFavorit } = React.useContext(DadosContext);
   const [active, setActive] = React.useState(false);
+  const [contar, setContar] = React.useState(0);
+  const [notification, setNotification] = React.useState(null);
+  const timeoutRef = React.useRef();
   console.log(newData);
+
   return (
     <MusicContainer>
+      {notification && <h2>{notification}</h2>}
       <section className="content">
         {newData &&
           newData.map(({ id, preview, album, title, link }) => (
@@ -29,6 +34,12 @@ const ComponentMusic = () => {
                       { id, preview, title, album },
                     ]);
                     setActive(!active);
+                    setNotification("Adicionado aos favoritos");
+                    clearTimeout(timeoutRef.current);
+                    timeoutRef.current = setTimeout(() => {
+                      setNotification(null);
+                    }, 1000);
+                    setContar(contar + 1);
                   }}
                 >
                   <i className="fas fa-heart"></i>
