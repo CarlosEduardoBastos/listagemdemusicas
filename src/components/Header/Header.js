@@ -1,7 +1,7 @@
 import React from "react";
 import { HeaderContainer } from "./Header.styled";
 import banner from "../../img/banner.png";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -9,10 +9,28 @@ const Header = () => {
       <nav>
         <section className="navigation">
           <div className="logo">
-            <Link to="/">Home</Link>
+            <NavLink
+              to="/"
+              style={({ isActive }) => {
+                return {
+                  color: isActive ? "white" : "",
+                };
+              }}
+            >
+              Home
+            </NavLink>
           </div>
           <div className="favorite">
-            <Link to="/favorite">Favorite</Link>
+            <NavLink
+              to="/favorite"
+              style={({ isActive }) => {
+                return {
+                  color: isActive ? "white" : "",
+                };
+              }}
+            >
+              Favorite
+            </NavLink>
           </div>
         </section>
       </nav>

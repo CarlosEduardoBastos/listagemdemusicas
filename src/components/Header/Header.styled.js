@@ -4,6 +4,7 @@ export const HeaderContainer = styled.header`
   width: 100%;
   height: 448px;
   background: #efb400;
+  font-family: Arial, Helvetica, sans-serif;
   .navigation {
     max-width: 1200px;
     margin: 0 auto;
