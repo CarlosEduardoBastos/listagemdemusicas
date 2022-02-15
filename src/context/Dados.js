@@ -16,12 +16,14 @@ export const DadosProvider = ({ children }) => {
       try {
         setError(null);
         setLoading(true);
+        console.log(process.env);
         response = await fetch(
-          "https://deezerdevs-deezer.p.rapidapi.com/search?q=Daft Punk&limit=12",
+          `${process.env.REACT_APP_UNSPLASH_URL} ${process.env.REACT_APP_UNSPLASH_LIMIT_PER_PAGES}`,
           {
             method: "GET",
             headers: {
-              
+              "x-rapidapi-host": `${process.env.REACT_APP_UNSPLASH_HOST}`,
+              "x-rapidapi-key": `${process.env.REACT_APP_UNSPLASH_KEY}`,
             },
           }
         );

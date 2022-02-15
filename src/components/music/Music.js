@@ -8,7 +8,6 @@ const ComponentMusic = () => {
   const [contar, setContar] = React.useState(0);
   const [notification, setNotification] = React.useState(null);
   const timeoutRef = React.useRef();
-  console.log(newData);
 
   return (
     <MusicContainer>
