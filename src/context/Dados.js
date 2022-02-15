@@ -16,7 +16,6 @@ export const DadosProvider = ({ children }) => {
       try {
         setError(null);
         setLoading(true);
-        console.log(process.env);
         response = await fetch(
           `${process.env.REACT_APP_UNSPLASH_URL} ${process.env.REACT_APP_UNSPLASH_LIMIT_PER_PAGES}`,
           {
