@@ -16,7 +16,6 @@ export const MusicContainer = styled.section`
 
     .itens {
       width: 300px;
-      height: 260px;
       padding: 10px;
       margin: 10px 5px;
       border: 1px solid #3b3a3a;

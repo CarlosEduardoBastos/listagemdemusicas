@@ -8,6 +8,7 @@ export const DadosProvider = ({ children }) => {
   const [search, setSearch] = React.useState("");
   const [loading, setLoading] = React.useState(null);
   const [error, setError] = React.useState(null);
+  const [contar, setContar] = React.useState(0);
 
   React.useEffect(() => {
     async function fetchDados() {
@@ -56,6 +57,8 @@ export const DadosProvider = ({ children }) => {
         setFavorit,
         search,
         setSearch,
+        contar,
+        setContar,
       }}
     >
       {children}

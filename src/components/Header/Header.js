@@ -3,7 +3,10 @@ import { HeaderContainer } from "./Header.styled";
 import banner from "../../img/banner.png";
 import { NavLink } from "react-router-dom";
 
+import { DadosContext } from "../../context/Dados";
+
 const Header = () => {
+  const { contar } = React.useContext(DadosContext);
   return (
     <HeaderContainer>
       <nav>
@@ -29,7 +32,7 @@ const Header = () => {
                 };
               }}
             >
-              Favorite
+              Favorite {contar}
             </NavLink>
           </div>
         </section>

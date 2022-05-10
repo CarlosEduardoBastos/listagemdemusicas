@@ -3,11 +3,14 @@ import { DadosContext } from "../../context/Dados";
 import { MusicContainer } from "./Music.styled";
 
 const ComponentMusic = () => {
-  const { newData, setFavorit } = React.useContext(DadosContext);
+  const { newData, setFavorit, contar, setContar } =
+    React.useContext(DadosContext);
   const [active, setActive] = React.useState(false);
-  const [contar, setContar] = React.useState(0);
   const [notification, setNotification] = React.useState(null);
   const timeoutRef = React.useRef();
+
+  const { name } = React.useContext(DadosContext);
+  console.log(name);
 
   return (
     <MusicContainer>
